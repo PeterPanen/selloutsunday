@@ -1,0 +1,89 @@
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #29292B;
+  font-family: roboto mono;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.entry {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 12px;
+  padding: 20px;
+  background: white;
+  box-shadow: none;
+  transition: background 400ms;
+  overflow: hidden;
+}
+
+.entry:hover {
+  background: rgb(200, 255, 200);
+  transition: background 400ms;
+  cursor: pointer;
+}
+
+.entry h3 {
+  text-align: center;
+}
+
+.entry .description {
+  margin: 6px;
+}
+
+.label {
+  display: inline-block;
+  position: absolute;
+  padding: 4px 12px;
+  background: limegreen;
+  color: white;
+  top: 0;
+  left: 50%;
+  margin-left: -66px;
+  font-size: 0.9em;
+  box-shadow: 0px 0px 3px 0px #444;
+}
+
+.likebutton {
+  display: inline-block;
+}
+
+.likebutton img {
+  width: 32px;
+}
+
+.thumbnail img {
+  width: 196px;
+}
+
+.label-enter {
+  top: -20px;
+}
+
+.label-enter.label-enter-active {
+  top: 0px;
+  transition: top 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.label-leave {
+  top: 0px;
+}
+
+.label-leave.label-leave-active {
+  top: -20px;
+  transition: top 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
